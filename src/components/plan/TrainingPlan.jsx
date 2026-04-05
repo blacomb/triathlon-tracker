@@ -1,4 +1,5 @@
 // src/components/plan/TrainingPlan.jsx
+import { useState } from 'react'
 import { Card } from '../ui/Card'
 import { DisciplineBadge } from '../ui/Badge'
 import { DISCIPLINES } from '../../lib/constants'

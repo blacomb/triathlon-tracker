@@ -21,8 +21,10 @@ export function Auth() {
         if (error) throw error
         setMessage('Check your email to confirm your account!')
       } else {
-        const { error } = await signIn(email, password)
-        if (error) throw error
+       const { data, error } = await signIn(email, password)
+console.log('sign in result:', data, error)
+if (error) throw error
+      window.location.href = '/'
       }
     } catch (e) {
       setError(e.message)
